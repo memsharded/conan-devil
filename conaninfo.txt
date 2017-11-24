@@ -1,0 +1,45 @@
+[settings]
+    arch=x86
+    build_type=Release
+    compiler=Visual Studio
+    compiler.runtime=MD
+    compiler.version=15
+    os=Windows
+
+[requires]
+    libjpeg/9a
+    libpng/1.Y.Z
+    libtiff/4.Y.Z
+    zlib/1.Y.Z
+
+[options]
+    shared=False
+
+[full_settings]
+    arch=x86
+    build_type=Release
+    compiler=Visual Studio
+    compiler.runtime=MD
+    compiler.version=15
+    os=Windows
+
+[full_requires]
+    libjpeg/9a@Kaosumaru/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
+    libpng/1.6.21@lasote/stable:b02659d133a8131c5433777813f6385a05a7ae8a
+    libtiff/4.0.6@bilke/stable:b02659d133a8131c5433777813f6385a05a7ae8a
+    zlib/1.2.8@lasote/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
+
+[full_options]
+    shared=False
+    libpng:shared=False
+    libtiff:shared=False
+    zlib:shared=False
+
+[scope]
+    dev=True
+
+[recipe_hash]
+
+
+[env]
+
