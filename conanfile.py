@@ -6,16 +6,19 @@ import os
 class DevilConan(ConanFile):
     name = "DevIL"
     version = "1.8.0"
+    homepage = "https://github.com/DentonW/DevIL"
+    description = ("Developer's Image Library (DevIL) is a cross-platform image library utilizing a simple syntax "
+                   "to load, save, convert, manipulate, filter, and display a variety of images with ease. "
+                   "It is highly portable and has been ported to several platforms.")
     license = "LGPL License http://openil.sourceforge.net/license.php"
     url = "https://github.com/whitebatman2/conan-devil"
-    requires = "zlib/1.2.8@lasote/stable", "libpng/1.6.21@lasote/stable", "libtiff/4.0.6@bilke/stable", "libjpeg/9a@Kaosumaru/stable"
+    requires = "zlib/1.2.11@conan/stable", "libpng/1.6.21@lasote/stable", "libtiff/4.0.6@bilke/stable", "libjpeg/9a@Kaosumaru/stable"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
-    default_options = "shared=True", "zlib:shared=True", "libpng:shared=True"
+    default_options = "shared=False"
     generators = "cmake"
 
     def source(self):
-
         zip_name = "v%s.zip" % self.version
         download("https://github.com/DentonW/DevIL/archive/%s" % zip_name, zip_name, verify=True)
         unzip(zip_name)
